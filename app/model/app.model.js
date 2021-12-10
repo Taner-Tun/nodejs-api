@@ -6,4 +6,7 @@ const AppSchema = mongoose.Schema({
   message: String,
 });
 
-module.exports = mongoose.model("App", AppSchema);
+
+
+
+module.exports = mongoose.model('App', AppSchema);
