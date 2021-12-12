@@ -8,7 +8,7 @@ module.exports = (app) => {
   
     app.get("/message/:messageId", App.findOne);
   
-    app.put("/message/:messageId", App.update);
+    app.patch("/message/:messageId", App.update);
   
     app.delete("/message/:messageId", App.delete);
   };
