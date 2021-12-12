@@ -7,7 +7,8 @@ const AppSchema = mongoose.Schema({
   message:{
     type: String,
     required: true
-  }  
+  },
+  
 });
 
 module.exports = mongoose.model('App', AppSchema);
