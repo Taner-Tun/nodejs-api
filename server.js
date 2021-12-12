@@ -5,15 +5,31 @@ const bodyParser = require('body-parser');
 // import mongoose
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-// connect to mongodb
-mongoose.connect("mongodb://127.0.0.1:27017/todo-mongoDB", {
+// connect to mongoose local host
+/*mongoose.connect("mongodb://127.0.0.1:27017/todo-mongoDB", {
     useNewUrlParser: true
 }).then(() => {
     console.log("Successfully connected to the database");    
 }).catch(err => {
     console.log('Could not connect to the database. Error...', err);
     process.exit();
-});
+});*/
+
+// connect to mongodb atlas
+const url = `mongodb+srv://Taner:noskire09876@slutprojekt.v73xt.mongodb.net/SLUTPROJEKT?retryWrites=true&w=majority`;
+const connectionParams={
+ useNewUrlParser: true,
+ //useCreateIndex: true,
+ useUnifiedTopology: true
+}
+mongoose.connect(url,connectionParams)
+ .then( () => {
+ console.log('Connected to database ')
+ })
+ .catch( (err) => {
+ console.error(`Error connecting to the database. \n${err}`);
+ });
+
 
 const app = express();
 
