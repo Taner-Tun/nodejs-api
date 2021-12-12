@@ -110,4 +110,27 @@ exports.delete = (req, res) => {
     });
 };
 
+// Delete all messages 
+
+/*exports.delete = (req, res) => {
+  App.findAndRemove(req.params.message)
+    .then((data) => {
+      if (!data) {
+        return res.status(404).send({
+          message: "Message not found  " + req.params.message,
+        });
+      }
+      res.send({ message: "Message deleted successfully!" });
+    })
+    .catch((err) => {
+      if (err.kind === "Object" || err.name === "NotFound") {
+        return res.status(404).send({
+          message: "Message not found" + req.params.message,
+        });
+      }
+      return res.status(500).send({
+        message: "Could not delete message" + req.params.message,
+      });
+    });
+};*/
 

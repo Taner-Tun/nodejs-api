@@ -11,5 +11,7 @@ module.exports = (app) => {
     app.patch("/message/:messageId", App.update);
   
     app.delete("/message/:messageId", App.delete);
+
+    app.delete("/delete-all", App.findAll);
   };
   
