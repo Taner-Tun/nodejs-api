@@ -119,11 +119,11 @@ exports.delete = (req, res) => {
    })
  });*/
 
- /*exports.deleteAll = (req,res) => {
+ exports.deleteAll = (req,res) => {
   message.deleteMany({})
   .then(data => {
     res.send({
-      message: `${data.deletedCount} Messages were deleted successfully!`
+      message: '${data.deletedCount} Messages were deleted successfully!'
     });
   })
   .catch(err => {
@@ -132,6 +132,6 @@ exports.delete = (req, res) => {
         err.message || "Some error occurred while removing all messages."
     });
   });
-};*/
+};
  
 
