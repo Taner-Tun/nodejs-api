@@ -12,6 +12,4 @@ module.exports = (app) => {
   
     app.delete("/message/:messageId", App.delete);
 
-    app.delete("/delete-all", App.findAll);
-  };
-  
+}

@@ -37,12 +37,13 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(bodyParser.json())
 
+// test for server on browser local host
 app.get('/', (req, res) => {
-    res.json({"message": "Server is running :D"});
+    res.json({ message: "Server is running"});
 });
 
 let PORT = 8080
-require('./app/routes/app.routes.js')(app);
+require('./app/routes/app.routes.js')(app);//include the routes in server.js.
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
 });

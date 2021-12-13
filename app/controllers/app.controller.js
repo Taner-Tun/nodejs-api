@@ -111,26 +111,27 @@ exports.delete = (req, res) => {
 };
 
 // Delete all messages 
+ /*exports.delete ('/delete-all',function (req,res) {
+   message.deleteMany(function(err){
+     if(!err) {
+       res.send("Successfully deleted all messages")
+     }
+   })
+ });*/
 
-/*exports.delete = (req, res) => {
-  App.findAndRemove(req.params.message)
-    .then((data) => {
-      if (!data) {
-        return res.status(404).send({
-          message: "Message not found  " + req.params.message,
-        });
-      }
-      res.send({ message: "Message deleted successfully!" });
-    })
-    .catch((err) => {
-      if (err.kind === "Object" || err.name === "NotFound") {
-        return res.status(404).send({
-          message: "Message not found" + req.params.message,
-        });
-      }
-      return res.status(500).send({
-        message: "Could not delete message" + req.params.message,
-      });
+ /*exports.deleteAll = (req,res) => {
+  message.deleteMany({})
+  .then(data => {
+    res.send({
+      message: `${data.deletedCount} Messages were deleted successfully!`
     });
+  })
+  .catch(err => {
+    res.status(500).send({
+      message:
+        err.message || "Some error occurred while removing all messages."
+    });
+  });
 };*/
+ 
 
